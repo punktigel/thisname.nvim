@@ -1,0 +1,2 @@
+# thisname.nvim
+Nvim colorscheme
