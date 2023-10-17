@@ -169,6 +169,38 @@ function M._load()
         ['netrwComment'] = {fg = p.green_blue},
         ['netrwPlain'] = {fg = p.gray},
         ['netrwHdr'] = {fg = p.orange},
+
+
+        -- Markdown
+        ['markdownH1'] = {fg = p.green_blue, bold = true},
+        ['markdownH2'] = {fg = p.purple, bold = true},
+        ['markdownH3'] = {fg = p.blue, bold = true},
+        ['markdownH4'] = {fg = p.d_green, bold = true},
+        ['markdownH5'] = {fg = p.orange, bold = true},
+        ['markdownH6'] = {fg = p.purple_dark, bold = true},
+
+        ['markdownH1Delimiter'] = {link = 'markdownH1'},
+        ['markdownH2Delimiter'] = {link = 'markdownH2'},
+        ['markdownH3Delimiter'] = {link = 'markdownH3'},
+        ['markdownH4Delimiter'] = {link = 'markdownH4'},
+        ['markdownH5Delimiter'] = {link = 'markdownH5'},
+        ['markdownH6Delimiter'] = {link = 'markdownH6'},
+
+
+        -- treesitter Markdown Headings
+        ['@text.title.1.markdown'] = {link = 'markdownH1'},
+        ['@text.title.2.markdown'] = {link = 'markdownH2'},
+        ['@text.title.3.markdown'] = {link = 'markdownH3'},
+        ['@text.title.4.markdown'] = {link = 'markdownH4'},
+        ['@text.title.5.markdown'] = {link = 'markdownH5'},
+        ['@text.title.6.markdown'] = {link = 'markdownH6'},
+
+        ['@text.title.1.marker.markdown'] = {link = 'markdownH1Delimiter'},
+        ['@text.title.2.marker.markdown'] = {link = 'markdownH2Delimiter'},
+        ['@text.title.3.marker.markdown'] = {link = 'markdownH3Delimiter'},
+        ['@text.title.4.marker.markdown'] = {link = 'markdownH4Delimiter'},
+        ['@text.title.5.marker.markdown'] = {link = 'markdownH5Delimiter'},
+        ['@text.title.6.marker.markdown'] = {link = 'markdownH6Delimiter'},
     }
 
 
