@@ -2,11 +2,34 @@ local options = require('thisname.config').options
 
 local variants = {
     light = {
-        bg = '#ffffff',
+        bg = '#ededed',
         fg = '#111111',
 
-        red = '#e61732',
-        orange = '#e68517'
+        bg_light = '#cccccc',
+        bg_dark = '#999999',
+
+        black = '#000000',
+        white = '#ffffff',
+
+        gray = '#757575',
+        gray_dark = '#b5b5b5',
+
+        green_blue = '#32bf9f',
+
+        purple = '#eb34d5',
+        purple_dark = '#b327a2',
+
+        blue_light = '#98b0d9',
+        blue = '#3d71cc',
+
+        red = '#eb4667',
+
+        orange = '#ebb146',
+        orange_dark = '#bf9d5a',
+
+        d_red = '#eb4667',
+        d_orange = '#ebc66f',
+        d_green = '#489968',
     },
 
     dark = {
