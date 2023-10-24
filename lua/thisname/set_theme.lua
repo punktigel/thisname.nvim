@@ -76,7 +76,7 @@ function M._load()
         ['Title'] = {},                   --| Titles for output from ":set all", ":autocmd" etc.
         ['Visual'] = {bg = p.bg_light},                  --| Visual mode selection.
         ['VisualNOS'] = {},               --| Visual mode selection when vim is "Not Owning the Selection".
-        ['WarningMsg'] = {fg = p.yellow},              --| Warning messages.
+        ['WarningMsg'] = {},              --| Warning messages.
         ['Whitespace'] = {},              --| "nbsp", "space", "tab", "multispace", "lead" and "trail" in 'listchars'.
         ['WildMenu'] = {bg = p.green_blue},                --| Current match in 'wildmenu' completion.
         -- ['WinBar'] = {},                  --| Window bar of current window.
@@ -99,7 +99,7 @@ function M._load()
         ['Identifier'] = {},         --| any variable name
         ['Function'] = {fg = p.green_blue},           --| function name (also: methods for classes)
 
-        ['Statement'] = {fg = p.purple_dark},          --| any statement
+        ['Statement'] = {fg = p.purple_dark, bold=true},          --| any statement
         -- ['Conditional'] = {},        --| if, then, else, endif, switch, etc.
         -- ['Repeat'] = {},             --| for, do, while, etc.
         -- ['Label'] = {},              --| case, default, etc.
@@ -145,8 +145,8 @@ function M._load()
 
         ['TelescopeMatching'] = {fg = p.green_blue}, -- Matching characters from your input
 
-        ['TelescopeSelection'] = {bg = p.gray_dark}, -- Selected item
-        ['TelescopeMultiSelection'] = {bg = p.gray}, -- Multiselections
+        ['TelescopeSelection'] = {bg = p.bg_light}, -- Selected item
+        ['TelescopeMultiSelection'] = {bg = p.bg_light}, -- Multiselections
         ['TelescopeSelectionCaret'] = {fg = p.green_blue, bold=true}, -- Selection caret prefix
 
         ['TelescopeNormal'] = {},
@@ -201,6 +201,63 @@ function M._load()
         ['@text.title.4.marker.markdown'] = {link = 'markdownH4Delimiter'},
         ['@text.title.5.marker.markdown'] = {link = 'markdownH5Delimiter'},
         ['@text.title.6.marker.markdown'] = {link = 'markdownH6Delimiter'},
+
+        -- Dap UI
+        -- ["DapUINormal"] = {},        -- links to Normal
+        -- ["DapUIVariable"] = {},      -- links to Normal
+        ["DapUIScope"] = {fg = p.green_blue, bold=true},            -- DAP Scope: local/global
+        ["DapUIType"] = {link = 'Type'},             -- Datatype
+        ["DapUIValue"] = {fg = p.blue_light},
+        ["DapUIModifiedValue"] = {fg = p.d_orange},
+        ["DapUIDecoration"] = {},       -- Icons: expanded/collapsed
+
+        -- DAP Stack (window)
+        ["DapUIThread"] = {},           -- DAP Stacks Threads
+        ["DapUIStoppedThread"] = {link = 'DapUIScope'},    -- DAP Stacks Stopped Thread
+        -- ["DapUIFrameName"] = {},        -- Stack Frame - links to DapUIBreakpointsCurrentLine
+        ["DapUISource"] = {fg = p.purple},           -- Stack Frame Source
+        ["DapUILineNumber"] = {link = 'LineNr'},       -- Stack LineNumbers
+
+        ["DapUIFloatNormal"] = {},
+        ["DapUIFloatBorder"] = {},
+
+        -- DAP Watches (window)
+        ["DapUIWatchesEmpty"] = {}, -- Nothing selected
+        ["DapUIWatchesValue"] = {},
+        ["DapUIWatchesError"] = {},
+
+        -- DAP Breakpoints (window)
+        ["DapUIBreakpointsPath"] = {fg = p.blue_light},
+        ["DapUIBreakpointsInfo"] = {},
+        ["DapUIBreakpointsCurrentLine"] = {},   -- Current LineNumber Breakpoint
+        -- ["DapUIBreakpointsLine"] = {},       -- links to DapUILineNumber
+        ["DapUIBreakpointsDisabledLine"] = {},
+        -- ["DapUICurrentFrameName"] = {},      -- links to DapUIBreakpointsCurrentLine
+
+        -- DAP replay (window) icons
+        ["DapUIStepOver"] = {},     -- StepOver Icon
+        ["DapUIStepInto"] = {},     -- StepInto Icon
+        ["DapUIStepBack"] = {},     -- StepBack Icon
+        ["DapUIStepOut"] = {},      -- StepOut Icon
+        ["DapUIStop"] = {},         -- Stop Icon
+        ["DapUIPlayPause"] = {},    -- Play/Pause Icon
+        ["DapUIRestart"] = {},      -- Restart Icon
+
+        ["DapUIUnavailable"] = {},
+        ["DapUIWinSelect"] = {},
+        ["DapUIEndofBuffer"] = {fg = p.bg}, -- links to EndOfBuffer
+
+        -- DAP replay icons in an unfocused terminal (window)
+        -- ["DapUINormalNC"] = {}, -- links to Normal
+        ["DapUIPlayPauseNC"] = {},
+        ["DapUIRestartNC"] = {},
+        ["DapUIStopNC"] = {},
+        ["DapUIUnavailableNC"] = {},
+        ["DapUIStepOverNC"] = {},
+        ["DapUIStepIntoNC"] = {},
+        ["DapUIStepBackNC"] = {},
+        ["DapUIStepOutNC"] = {},
+
     }
 
 
